@@ -13,7 +13,7 @@
 <br>
 <br>
 <label for="accountList">Current Accounts:</label>
-<select name="accountList" id="accountList" class="form-control" @bind="selectedAccountName" @bind:event="onchange">
+<select name="accountList" id="accountList" class="form-control" @bind="selectedAccountName" @bind:event="onchange" @onclick="updateAccount">
     @if (accountList != null && accountList.Count > 0)
     {
         <option value="NoAccountSelected">Select an account</option>
